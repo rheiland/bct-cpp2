@@ -1,0 +1,24 @@
+# See the bct-cpp user's guide for help with this file:
+# http://code.google.com/p/bct-cpp/wiki/UsersGuide
+
+CXXFLAGS                    += -DGSL_DOUBLE
+install_dir                  = /usr/local
+
+python_version               = 2.6
+
+python_include_dir_apple     = /Library/Frameworks/Python.framework/Versions/Current/include/python$(python_version)
+python_include_dir_apple_EPD = /Library/Frameworks/EPD64.framework/Versions/Current/include/python$(python_version)
+python_include_dir_linux     = /usr/include/python$(python_version)
+python_include_dir           =
+
+python_package_dir_apple1    = /Library/Frameworks/Python.framework/Versions/Current/lib/python$(python_version)/site-packages
+python_package_dir_apple2    = /Library/Python/$(python_version)/site-packages
+python_package_dir_linux     = /usr/lib/python$(python_version)/site-packages
+python_package_dir           =
+
+swig_cxx_flags_linux         = -fPIC
+swig_cxx_flags               =
+
+swig_lib_flags_apple         = -bundle -flat_namespace -undefined suppress
+swig_lib_flags_linux         = -shared
+swig_lib_flags               =
